@@ -1,3 +1,7 @@
+ Modified the exchange subgraph only(https://github.com/Kousika1/bsctestnet-subgraph/tree/main/subgraphs/exchange). <br />
+ Please replace the source address and FACTORY_ADDRESS for running.
+
+
 # PancakeSwap Subgraph
 
 TheGraph exposes a GraphQL endpoint to query the events and entities within the Binance Smart Chain and PancakeSwap ecosystem.
