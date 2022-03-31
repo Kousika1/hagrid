@@ -5,12 +5,12 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: Factory
-    network: bsc
+    name: IPancakePair
+    network: chapel
     source:
-      address: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
-      abi: Factory
-      startBlock: 6809737
+      address: '0xcdafc63de847bbfb7e6b56b21aad12f8f6d877be'
+      abi: IPancakePair
+      startBlock: 97
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -20,23 +20,19 @@ dataSources:
         - Pair
         - Token
       abis:
-        - name: Factory
-          file: ./abis/Factory.json
         - name: ERC20
           file: ./abis/ERC20.json
-        - name: ERC20NameBytes
-          file: ./abis/ERC20NameBytes.json
-        - name: ERC20SymbolBytes
-          file: ./abis/ERC20SymbolBytes.json
+        - name: IPancakePair
+          file: ./abis/IPancakePair.json
       eventHandlers:
-        - event: PairCreated(indexed address,indexed address,address,uint256)
-          handler: handlePairCreated
+        - event: Swap(indexed address,uint256,uint256,uint256,uint256,indexed address)
+          handler: handleSwap
 templates:
   - kind: ethereum/contract
-    name: Pair
-    network: bsc
+    name: IPancakePair
+    network: chapel
     source:
-      abi: Pair
+      abi: IPancakePair
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -46,10 +42,10 @@ templates:
         - Pair
         - Token
       abis:
-        - name: Factory
-          file: ./abis/Factory.json
-        - name: Pair
-          file: ./abis/Pair.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: IPancakePair
+          file: ./abis/IPancakePair.json
       eventHandlers:
         - event: Mint(indexed address,uint256,uint256)
           handler: handleMint
