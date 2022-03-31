@@ -8,7 +8,7 @@ dataSources:
     name: IPancakePair
     network: chapel
     source:
-      address: '0xcdafc63de847bbfb7e6b56b21aad12f8f6d877be'
+      address: 'FACTORY_ADDRESS'
       abi: IPancakePair
       startBlock: 97
     mapping:

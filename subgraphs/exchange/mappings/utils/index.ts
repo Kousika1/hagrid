@@ -4,7 +4,7 @@ import { ERC20 } from "../../generated/IPancakePair/ERC20";
 import { IPancakePair as FactoryContract } from "../../generated/templates/IPancakePair/IPancakePair";
 
 export let ADDRESS_ZERO = "0x0000000000000000000000000000000000000000";
-export let FACTORY_ADDRESS = "0xcdafc63de847bbfb7e6b56b21aad12f8f6d877be";
+export let FACTORY_ADDRESS = "FACTORY_ADDRESS";
 
 export let ZERO_BI = BigInt.fromI32(0);
 export let ONE_BI = BigInt.fromI32(1);
