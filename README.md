@@ -1,5 +1,5 @@
  Modified the exchange subgraph only(https://github.com/Kousika1/bsctestnet-subgraph/tree/main/subgraphs/exchange). <br />
- Please replace the source address and FACTORY_ADDRESS for running.
+ Please replace the source address and FACTORY_ADDRESS values before running.
 
 
 # PancakeSwap Subgraph
